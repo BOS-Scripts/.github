@@ -1,0 +1,54 @@
+name: Feature Request
+description: Suggest a new feature or improvement for a BOS Scripts resource.
+title: "[Feature]: "
+labels:
+  - feature
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve BOS Scripts.
+
+        Please describe the requested functionality clearly.
+
+  - type: input
+    id: resource
+    attributes:
+      label: Resource
+      description: Which BOS Scripts resource should this affect?
+      placeholder: bos-needsleep
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What problem would this feature solve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: Describe how you would like the feature to work.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives
+      description: Describe any alternative solutions you considered.
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional information
+      description: Add screenshots, examples or other useful information.
+    validations:
+      required: false
