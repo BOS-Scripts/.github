@@ -1,0 +1,86 @@
+name: Bug Report
+description: Report a reproducible problem with a BOS Scripts resource.
+title: "[Bug]: "
+labels:
+  - bug
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a bug.
+
+        Please provide as much technical information as possible.
+
+  - type: input
+    id: resource
+    attributes:
+      label: Resource
+      description: Which BOS Scripts resource is affected?
+      placeholder: bos-needsleep
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Which version of the resource are you using?
+      placeholder: 1.0.0
+    validations:
+      required: true
+
+  - type: input
+    id: framework
+    attributes:
+      label: Framework
+      description: Which framework are you using?
+      placeholder: ESX / QBCore / Standalone
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Clearly describe the problem.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Provide the exact steps required to reproduce the problem.
+      placeholder: |
+        1. Start the resource
+        2. Execute ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: errors
+    attributes:
+      label: Errors and logs
+      description: Paste relevant client or server console errors.
+      render: text
+    validations:
+      required: false
+
+  - type: textarea
+    id: configuration
+    attributes:
+      label: Relevant configuration
+      description: Include relevant configuration values.
+      render: lua
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional information
+      description: Add any other information that may help diagnose the issue.
+    validations:
+      required: false
